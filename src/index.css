@@ -1,69 +1,131 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap&family=Homemade+Apple&display=swap");
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@layer base {
+    * {
+        @apply m-0 p-0 box-border;
+    }
+    body {
+        @apply bg-bgColor text-PrimaryColor;
+        font-family: "Ubuntu", sans-serif;
+    }
+    section {
+        @apply py-[80px] px-[10%] transition-all duration-300;
+    }
+    a {
+        @apply no-underline cursor-pointer;
+    }
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+@layer components {
+    .image-transition {
+        @apply relative overflow-hidden rounded-3xl;
+    }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+    .image-transition img {
+        @apply transition-all duration-500 transform;
+    }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+    .image-transition:hover img {
+        @apply scale-[1.2];
+    }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+    .skill {
+        @apply flex flex-col h-36 w-36 items-center justify-center rounded-full overflow-hidden relative shrink-0;
+    }
+
+    .skill:hover {
+        @apply shadow-md shadow-white;
+    }
+
+    .skill:hover .after {
+        @apply right-0;
+    }
+
+    .wave {
+        @apply bg-gradient;
+
+        --mask: radial-gradient(44.72px at 50% 60px, #000 99%, #0000 101%)
+                calc(50% - 40px) 0/80px 51% repeat-x,
+            radial-gradient(44.72px at 50% -40px, #0000 99%, #000 101%) 50% 20px/80px
+                calc(51% - 20px) repeat-x,
+            radial-gradient(
+                    44.72px at 50% calc(100% - 60px),
+                    #000 99%,
+                    #0000 101%
+                )
+                calc(50% - 40px) 100%/80px 51% repeat-x,
+            radial-gradient(
+                    44.72px at 50% calc(100% + 40px),
+                    #0000 99%,
+                    #000 101%
+                )
+                50% calc(100% - 20px) / 80px calc(51% - 20px) repeat-x;
+        -webkit-mask: var(--mask);
+        mask: var(--mask);
+    }
+
+    .cta-box {
+        @apply rounded-xl p-[50px] cursor-pointer relative overflow-hidden transition-all duration-300;
+    }
+
+    .cta-box::after {
+        content: "";
+        @apply absolute h-full w-full top-0 left-[100%] bg-gradient-to-r from-blue-500 to-yellow-500 -z-10 transition-all duration-300;
+    }
+
+    .cta-box:hover {
+        @apply shadow-xl after:left-0;
+    }
+
+    .heading {
+        @apply text-center;
+    }
+
+    .heading h3 {
+        @apply font-textStyle text-xl;
+    }
+
+    .heading h2 {
+        @apply text-4xl font-semibold mt-2 mb-5 text-secondryColor;
+    }
+
+    .cursor {
+        z-index: 999;
+        position: fixed;
+        width: 12px;
+        height: 12px;
+        background-color: #8d2de2;
+        border-radius: 50%;
+        pointer-events: none;
+        left: 0;
+        top: 0;
+        transform: translate(-50%, -50%);
+        animation: colors 5s infinite;
+        transition: 0.1s;
+        display: none;
+    }
+
+    .cursor::before {
+        content: "";
+        position: absolute;
+        background-color: #8d2de2;
+        width: 36px;
+        height: 36px;
+        opacity: 0.2;
+        transform: translate(-33%, -33%);
+        border-radius: 50%;
+    }
+
+    @keyframes colors {
+        0% {
+            filter: hue-rotate(0deg);
+        }
+        100% {
+            filter: hue-rotate(360deg);
+        }
+    }
 }
