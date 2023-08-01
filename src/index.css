@@ -13,14 +13,33 @@
         font-family: "Ubuntu", sans-serif;
     }
     section {
-        @apply py-[80px] px-[10%] transition-all duration-300;
+        @apply py-[80px] transition-all duration-300 px-3;
     }
     a {
         @apply no-underline cursor-pointer;
     }
+    ::-webkit-scrollbar {
+        @apply w-[10px];
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-white;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-secondryColor;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-mainColor;
+    }
 }
 
 @layer components {
+    .link-hover:hover span {
+        @apply left-0;
+    }
+
     .image-transition {
         @apply relative overflow-hidden rounded-3xl;
     }

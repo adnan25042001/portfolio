@@ -22,7 +22,7 @@ const Cta = () => {
     };
     return (
         <motion.section className="wave w-full" variants={container} initial="hidden" whileInView="visible">
-            <div className="grid grid-cols-3 gap-8 items-center justify-center text-center">
+            <div className="container m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-center justify-center text-center">
                 <motion.div className="cta-box" variants={item}>
                     <h3 className="font-bold text-2xl mb-3">1200+</h3>
                     <p className="text-lg">Hours of coding</p>

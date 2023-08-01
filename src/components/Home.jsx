@@ -57,8 +57,8 @@ const Home = () => {
                         alt="myImage"
                         className="w-[320px] transition-all transform hover:scale-100"
                     />
-                    <div className="top-0 left-14 absolute h-full w-5 bg-bgColor"></div>
-                    <div className="left-0 bottom-14 absolute w-full h-5 bg-bgColor"></div>
+                    <div className="top-0 left-[14%] absolute h-full w-5 bg-bgColor"></div>
+                    <div className="left-0 bottom-[14%] absolute w-full h-5 bg-bgColor"></div>
                 </div>
             </div>
             {/* <img src={Grass} alt="grass" /> */}

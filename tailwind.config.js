@@ -12,9 +12,15 @@ export default {
             backgroundImage: {
                 gradient: "linear-gradient(to right, #9633e6, #df1d48)",
             },
-            fontFamily: {
-                textStyle: "'Homemade Apple', cursive",
-            },
+        },
+        fontFamily: {
+            textStyle: "'Homemade Apple', cursive",
+        },
+        screens: {
+            xs: "575px",
+            sm: "768px",
+            md: "992px",
+            lg: "1200px",
         },
     },
     plugins: [],

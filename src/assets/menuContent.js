@@ -4,5 +4,4 @@ export const menuItem = [
     "Skills",
     "Portfolio",
     "Contact",
-    "Download CV",
 ];
