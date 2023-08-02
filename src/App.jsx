@@ -1,11 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import Home from "./components/Home";
 import Cta from "./components/Cta";
 import Skills from "./components/Skills/Skills";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import About from "./components/About";
+import MyContext, { Context } from "./assets/context/MyContext";
 
 const App = () => {
+    const { setScrolled } = useContext(Context);
+
+    useEffect(() => {
+        let home = document.getElementById("home").clientHeight;
+        const scrollFunc = () => {
+            let scroll = window.scrollY;
+            if (scroll > home + 20) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+        window.addEventListener("scroll", scrollFunc);
+    }, [window.scrollY]);
+
     useEffect(() => {
         let cursor = document.querySelector(".cursor");
         let timeout;
@@ -32,6 +49,7 @@ const App = () => {
         <>
             <Navbar />
             <Home />
+            <About />
             <Skills />
             <Cta />
             <Footer />

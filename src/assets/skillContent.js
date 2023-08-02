@@ -1,19 +1,19 @@
-import html from "./imgages/skills/html.svg";
-import css from "./imgages/skills/css.svg";
-import js from "./imgages/skills/js.svg";
-import java from "./imgages/skills/java.svg";
-import react from "./imgages/skills/react.svg";
-import node from "./imgages/skills/node.svg";
-import tailwind from "./imgages/skills/tailwind.png";
-import bootstrap from "./imgages/skills/bootstrap.svg";
-import spring from "./imgages/skills/spring.svg";
-import springboot from "./imgages/skills/springboot.png";
-import maven from "./imgages/skills/maven.png";
-import hibernate from "./imgages/skills/hibernate.svg";
-import mysql from "./imgages/skills/mysql.svg";
-import github from "./imgages/skills/github.svg";
-import postman from "./imgages/skills/postman.svg";
-import netlify from "./imgages/skills/netlify.svg";
+import html from "./images/skills/html.svg";
+import css from "./images/skills/css.svg";
+import js from "./images/skills/js.svg";
+import java from "./images/skills/java.svg";
+import react from "./images/skills/react.svg";
+import node from "./images/skills/node.svg";
+import tailwind from "./images/skills/tailwind.png";
+import bootstrap from "./images/skills/bootstrap.svg";
+import spring from "./images/skills/spring.svg";
+import springboot from "./images/skills/springboot.png";
+import maven from "./images/skills/maven.png";
+import hibernate from "./images/skills/hibernate.svg";
+import mysql from "./images/skills/mysql.svg";
+import github from "./images/skills/github.svg";
+import postman from "./images/skills/postman.svg";
+import netlify from "./images/skills/netlify.svg";
 
 export const skillContent = [
     { name: "html", img: html },

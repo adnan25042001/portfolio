@@ -36,6 +36,10 @@
 }
 
 @layer components {
+    .link-hover span.active {
+        @apply left-0;
+    }
+
     .link-hover:hover span {
         @apply left-0;
     }
