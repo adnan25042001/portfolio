@@ -4,6 +4,8 @@ import js from "./images/skills/js.svg";
 import java from "./images/skills/java.svg";
 import react from "./images/skills/react.svg";
 import node from "./images/skills/node.svg";
+import next from "./images/skills/nextjs.svg";
+import vite from "./images/skills/vite.svg";
 import tailwind from "./images/skills/tailwind.png";
 import bootstrap from "./images/skills/bootstrap.svg";
 import spring from "./images/skills/spring.svg";
@@ -23,6 +25,8 @@ export const skillContent = [
     { name: "Java", img: java },
     { name: "react", img: react },
     { name: "node js", img: node },
+    { name: "next js", img: next },
+    { name: "vite js", img: vite },
     { name: "tailwind", img: tailwind },
     { name: "bootstrap", img: bootstrap },
     { name: "spring", img: spring },
