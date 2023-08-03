@@ -12,12 +12,8 @@ const App = () => {
 
     useEffect(() => {
         let home = document.getElementById("home").clientHeight;
-        let homeText = document.querySelector("home-text");
-        let homeImg = document.querySelector("home-img");
         const scrollFunc = () => {
             let scroll = window.scrollY;
-
-            homeImg.style.top = homeText.style.top = scroll * 2.5 + "px"
 
             if (scroll > home + 100) {
                 setScrolled(true);

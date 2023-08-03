@@ -7,9 +7,10 @@ export default {
                 bgColor: "#020912",
                 mainColor: "#8d2de2",
                 PrimaryColor: "white",
-                secondryColor: "#d1d1d1",
+                secondryColor: "#e4e4e4",
             },
             backgroundImage: {
+                icon: "linear-gradient(-45deg, #9633e6, #df1d48)",
                 gradient: "linear-gradient(to right, #9633e6, #df1d48)",
             },
         },

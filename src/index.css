@@ -44,6 +44,56 @@
         @apply left-0;
     }
 
+    .social {
+        @apply flex items-center my-6 flex-wrap gap-8;
+    }
+
+    .social .social-link {
+        @apply w-10 h-10 rounded-full flex items-center justify-center bg-white text-xl text-bgColor cursor-pointer transition-all duration-500 shrink-0  overflow-hidden relative;
+    }
+
+    .social .social-link svg {
+        @apply relative transition-all duration-500;
+    }
+
+    .social .social-link:hover svg {
+        @apply text-white;
+    }
+
+    .social .social-link::after {
+        content: "";
+        @apply h-full w-full top-[-110%] left-0 bg-icon absolute transition-all duration-500 z-[-1];
+    }
+
+    .social .social-link:hover::after {
+        @apply top-0;
+    }
+
+    .social .social-link:hover {
+        @apply scale-[1.15];
+    }
+
+    .social div {
+        @apply text-black font-medium text-xl px-3 h-10 rounded-lg flex items-center justify-center transition-all duration-500 relative bg-white overflow-hidden;
+    }
+
+    .social div .btn{
+        @apply z-[1]
+    }
+
+    .social div::after {
+        content: "";
+        @apply h-full w-full top-0 right-[-110%] bg-icon absolute transition-all duration-500 z-0;
+    }
+
+    .social div:hover {
+        @apply text-white;
+    }
+
+    .social div:hover::after {
+        @apply right-0;
+    }
+
     .image-transition {
         @apply relative overflow-hidden rounded-3xl;
     }
@@ -113,7 +163,7 @@
     }
 
     .heading h2 {
-        @apply text-4xl font-semibold mt-2 mb-5 text-secondryColor;
+        @apply text-2xl sm:text-3xl md:text-4xl font-semibold mt-2 mb-5 text-secondryColor;
     }
 
     .cursor {
