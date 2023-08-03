@@ -11,6 +11,7 @@ import springboot from "./images/skills/springboot.png";
 import maven from "./images/skills/maven.png";
 import hibernate from "./images/skills/hibernate.svg";
 import mysql from "./images/skills/mysql.svg";
+import mongodb from "./images/skills/mongodb.svg";
 import github from "./images/skills/github.svg";
 import postman from "./images/skills/postman.svg";
 import netlify from "./images/skills/netlify.svg";
@@ -29,6 +30,7 @@ export const skillContent = [
     { name: "maven", img: maven },
     { name: "hibernate", img: hibernate },
     { name: "mysql", img: mysql },
+    { name: "mongodb", img: mongodb },
     { name: "github", img: github },
     { name: "postman", img: postman },
     { name: "netlify", img: netlify },
