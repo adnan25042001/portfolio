@@ -11,7 +11,7 @@ const Home = () => {
             className={`bg-[url(./assets/images/star-background.jpg)] bg-no-repeat bg-cover bg-fixed relative min-h-[100vh] pt-[120px]`}
         >
             <div
-                className="container m-auto flex flex-col-reverse sm:flex-row justify-between items-center relative"
+                className="container m-auto flex flex-col-reverse sm:flex-row justify-between items-center relative h-full"
                 id="home"
             >
                 <motion.div

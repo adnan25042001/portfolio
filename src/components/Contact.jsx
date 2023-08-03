@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
+import Footer from "./Footer";
 
 const Contact = () => {
-  return (
-    <div>
-      Contact
-    </div>
-  )
-}
+    return (
+        <section>
+            Contact
+            <Footer />
+        </section>
+    );
+};
 
-export default Contact
+export default Contact;
