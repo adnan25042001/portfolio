@@ -13,7 +13,7 @@ const Skill = ({ skill }) => {
         >
             <img src={skill.img} alt={skill.name} className="w-[45%] mb-3" />
             <p className="text-sm uppercase">{skill.name}</p>
-            <div className="after absolute w-full h-full right-[100%] transition-all bg-bgColor -z-10"></div>
+            <div className="after absolute w-full h-full right-[100%] transition-all duration-300 bg-bgColor -z-10"></div>
         </motion.div>
     );
 };
