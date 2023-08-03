@@ -2,17 +2,23 @@ import React from "react";
 import myImage from "../assets/images/MyImg.png";
 import grass from "../assets/images/grass.png";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const Home = () => {
     return (
         <section
-            className={`bg-[url(./assets/images/star-background.jpg)] bg-no-repeat bg-cover bg-center bg-fixed relative h-[100vh] max-h-full`}
+            className={`bg-[url(./assets/images/star-background.jpg)] bg-no-repeat bg-cover bg-center bg-fixed relative min-h-[100vh] pt-[120px]`}
         >
             <div
-                className="container m-auto flex justify-between items-center"
+                className="container m-auto flex flex-col-reverse sm:flex-row justify-between items-center relative"
                 id="home"
             >
-                <div className="home-text">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="home-text static w-full sm:w-[45%]"
+                >
                     <h3>Hello, I'm</h3>
                     <h1>Adnan Hussain</h1>
                     <h5>
@@ -56,23 +62,28 @@ const Home = () => {
                             Download CV
                         </a>
                     </div>
-                </div>
-                <div className="flex justify-center items-center p-20">
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="flex justify-center items-center static w-[100%] mb-10 sm:w-[45%] sm:mb-0"
+                >
                     <div className="image-transition bg-gradient-to-l from-purple-600 to-rose-600">
                         <img
                             src={myImage}
                             alt="myImage"
-                            className="w-[320px] transition-all transform hover:scale-100"
+                            className="w-[240px] transition-all transform hover:scale-100"
                         />
-                        <div className="top-0 left-[14%] absolute h-full w-5 bg-bgColor"></div>
-                        <div className="left-0 bottom-[14%] absolute w-full h-5 bg-bgColor"></div>
+                        <div className="top-0 left-[14%] absolute h-full w-3 sm:w-4 bg-bgColor"></div>
+                        <div className="left-0 bottom-[14%] absolute w-full h-3 sm:h-4 bg-bgColor"></div>
                     </div>
-                </div>
+                </motion.div>
             </div>
             <img
                 src={grass}
                 alt="grass"
-                className="absolute bottom-0 left-0 w-full"
+                className="absolute bottom-0 left-0 w-full bg-cover bg-no-repeat"
             />
         </section>
     );
