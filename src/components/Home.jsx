@@ -63,11 +63,6 @@ const Home = () => {
                             </a>
                         </div>
                     </div>
-                    {/* <div className="d-btn">
-                        <a href={pdf} className="btn" id="abt_btn" download>
-                            Download CV
-                        </a>
-                    </div> */}
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, scale: 0 }}

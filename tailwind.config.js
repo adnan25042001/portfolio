@@ -15,7 +15,7 @@ export default {
             },
         },
         fontFamily: {
-            textStyle: "'Homemade Apple', cursive",
+            textStyle: "'Comforter Brush', cursive",
         },
         screens: {
             xs: "575px",

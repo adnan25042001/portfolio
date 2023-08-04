@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap&family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap&family=Comforter+Brush");
 
 @tailwind base;
 @tailwind components;
@@ -169,7 +169,7 @@
     }
 
     .heading h3 {
-        @apply font-textStyle text-xl;
+        @apply font-textStyle text-2xl sm:text-3xl md:text-4xl;
     }
 
     .heading h2 {
