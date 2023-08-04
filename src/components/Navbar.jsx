@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
-import { menuItem } from "../assets/menuContent";
 import { Link } from "react-scroll";
 import { Context } from "../assets/context/MyContext";
+import { menuItem } from "../assets/data";
 
 const Navbar = () => {
     const { scrolled } = useContext(Context);
@@ -22,11 +22,11 @@ const Navbar = () => {
         <header
             className={` ${
                 scrolled
-                    ? "fixed shadow-lg bg-mainColor"
-                    : "absolute shadow-none bg-mainColor md:bg-transparent"
+                    ? "fixed shadow-lg bg-mainColor py-3"
+                    : "absolute shadow-none bg-mainColor md:bg-transparent py-4"
             } w-full z-[900]`}
         >
-            <div className="container m-auto flex items-center justify-between px-3 py-3 w-full">
+            <div className="container m-auto flex items-center justify-between px-3 w-full">
                 <Link
                     to="home"
                     spy={true}
@@ -35,7 +35,7 @@ const Navbar = () => {
                     offset={-100}
                     onClick={() => {
                         setToggle(false);
-                        click()
+                        click();
                     }}
                     className="text-xl xs:text-2xl font-bold static z-[100]"
                 >

@@ -3,10 +3,6 @@ import aboutImg from "../assets/images/about-img.gif";
 import { motion } from "framer-motion";
 
 const About = () => {
-    const item = {
-        hidden: { y: 100, opacity: 0 },
-        visible: { y: 0, opacity: 1 },
-    };
     return (
         <section>
             <div className="container m-auto" id="about">

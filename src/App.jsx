@@ -5,9 +5,10 @@ import Skills from "./components/Skills/Skills";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
-import Contact from "./components/Contact"
+import Contact from "./components/Contact";
 import { Context } from "./assets/context/MyContext";
 import Portfolio from "./components/Portfolio/Portfolio";
+import GithubCalender from "./components/GithubCalender";
 
 const App = () => {
     const { setScrolled } = useContext(Context);
@@ -53,9 +54,10 @@ const App = () => {
             <Navbar />
             <Home />
             <About />
-            <Skills />
             <Portfolio />
+            <Skills />
             <Cta />
+            {/* <GithubCalender /> */}
             <Contact />
             <div className="cursor"></div>
         </>

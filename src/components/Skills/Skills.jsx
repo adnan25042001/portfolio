@@ -1,7 +1,7 @@
 import React from "react";
 import Skill from "./Skill";
-import { skillContent } from "../../assets/skillContent";
 import { motion } from "framer-motion";
+import { skillList } from "../../assets/data";
 
 const Skills = () => {
     const container = {
@@ -18,7 +18,6 @@ const Skills = () => {
     };
     return (
         <motion.section
-            className="wave"
             variants={container}
             initial="hidden"
             whileInView="visible"
@@ -26,12 +25,12 @@ const Skills = () => {
             id="skills"
         >
             <div className="heading mb-14">
-                <h3>skills</h3>
+                <h3 className="text-mainColor">skills</h3>
                 <h2>Technologies I've learned</h2>
             </div>
             <div className="container m-auto flex flex-wrap items-center justify-center w-full gap-10">
-                {skillContent &&
-                    skillContent.map((skill) => {
+                {skillList &&
+                    skillList.map((skill) => {
                         return <Skill key={skill.img} skill={skill} />;
                     })}
             </div>

@@ -36,7 +36,6 @@
 }
 
 @layer components {
-
     .link-hover span.active {
         @apply left-0;
     }
@@ -78,8 +77,8 @@
         @apply text-black font-medium text-xl px-3 h-10 rounded-lg flex items-center justify-center transition-all duration-500 relative bg-white overflow-hidden;
     }
 
-    .social div .btn{
-        @apply z-[1]
+    .social div .btn {
+        @apply z-[1];
     }
 
     .social div::after {
@@ -138,6 +137,16 @@
                     #000 101%
                 )
                 50% calc(100% - 20px) / 80px calc(51% - 20px) repeat-x;
+        -webkit-mask: var(--mask);
+        mask: var(--mask);
+    }
+
+    .wave-2 {
+        @apply bg-gradient;
+        --mask: radial-gradient(44.72px at 50% 60px, #000 99%, #0000 101%)
+                calc(50% - 40px) 0/80px 100%,
+            radial-gradient(44.72px at 50% -40px, #0000 99%, #000 101%) 50% 20px/80px
+                100% repeat-x;
         -webkit-mask: var(--mask);
         mask: var(--mask);
     }
