@@ -3,7 +3,7 @@ import Footer from "./Footer";
 
 const Contact = () => {
     return (
-        <section>
+        <section id="contact">
             Contact
             <Footer />
         </section>

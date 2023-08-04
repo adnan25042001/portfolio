@@ -10,11 +10,12 @@ const Navbar = () => {
 
     const click = (ele) => {
         let links = document.querySelectorAll(".link-hover span");
-        console.log(ele.querySelector("span"));
         links.forEach((link) => {
             link.classList.remove("active");
         });
-        ele.querySelector("span").classList.add("active");
+        if (ele) {
+            ele.querySelector("span").classList.add("active");
+        }
     };
 
     return (
@@ -26,12 +27,20 @@ const Navbar = () => {
             } w-full z-[900]`}
         >
             <div className="container m-auto flex items-center justify-between px-3 py-3 w-full">
-                <a
-                    href="#"
+                <Link
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    offset={-100}
+                    onClick={() => {
+                        setToggle(false);
+                        click()
+                    }}
                     className="text-xl xs:text-2xl font-bold static z-[100]"
                 >
                     Adnan Hussain
-                </a>
+                </Link>
                 <nav
                     className={`${
                         toggle ? "top-[52px] xs:top-[56px]" : "top-[-1000px]"

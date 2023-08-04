@@ -18,14 +18,14 @@ const Skills = () => {
     };
     return (
         <motion.section
-            className="wave flex justify-center items-center flex-col gap-14 w-full"
+            className="wave"
             variants={container}
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.3 }}
             id="skills"
         >
-            <div className="heading">
+            <div className="heading mb-14">
                 <h3>skills</h3>
                 <h2>Technologies I've learned</h2>
             </div>
