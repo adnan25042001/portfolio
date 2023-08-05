@@ -13,6 +13,9 @@ export default {
                 icon: "linear-gradient(-45deg, #9633e6, #df1d48)",
                 gradient: "linear-gradient(to right, #9633e6, #df1d48)",
             },
+            boxShadow: {
+                bs: "0 5px 10px rgba(0, 0, 0, 0.3)",
+            },
         },
         fontFamily: {
             textStyle: "'Comforter Brush', cursive",

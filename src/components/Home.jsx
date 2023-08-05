@@ -35,25 +35,25 @@ const Home = () => {
                         Are you minding a project? <br />
                         Let's talk.
                     </p>
-                    <div className="social">
+                    <div className="social my-6 gap-8">
                         <a
                             href="https://www.linkedin.com/in/adnanhussain0425/"
                             target="_blank"
-                            className="social-link"
+                            className="social-link bg-white text-bgColor"
                         >
                             <SiLinkedin />
                         </a>
                         <a
                             href="https://github.com/adnan25042001"
                             target="_blank"
-                            className="social-link"
+                            className="social-link bg-white text-bgColor"
                         >
                             <SiGithub />
                         </a>
                         <a
                             href="mailto:adnan.hussain.136660@gmail.com"
                             target="_blank"
-                            className="social-link"
+                            className="social-link bg-white text-bgColor"
                         >
                             <SiGmail />
                         </a>

@@ -55,7 +55,7 @@ const Navbar = () => {
                                         spy={true}
                                         smooth={true}
                                         duration={500}
-                                        offset={-100}
+                                        offset={ele === "Home" ? -100 : -50}
                                         key={ele}
                                         className="relative overflow-hidden py-1 px-4 lg:px-6 link-hover"
                                         onClick={(e) => {
@@ -71,7 +71,7 @@ const Navbar = () => {
                                 );
                             })}
                     </div>
-                    <button className="text-mainColor transition-all duration-300 font-semibold border-[2px] border-white rounded-lg bg-white py-[4px] px-[10px] lg:py-[6px] lg:px-3 hover:bg-transparent hover:text-white">
+                    <button className="text-mainColor transition-all duration-300 font-semibold border-[2px] border-white cursor-pointer rounded-lg bg-white py-[4px] px-[10px] lg:py-[6px] lg:px-3 hover:bg-transparent hover:text-white">
                         Download CV
                     </button>
                 </nav>

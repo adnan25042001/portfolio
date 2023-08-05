@@ -20,7 +20,7 @@ import github from "./images/skills/github.svg";
 import postman from "./images/skills/postman.svg";
 import netlify from "./images/skills/netlify.svg";
 
-export const menuItem = ["Home", "About", "Skills", "Portfolio", "Contact"];
+export const menuItem = ["Home", "About", "Portfolio", "Skills", "Contact"];
 
 export const portfolioList = [
     {
