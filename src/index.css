@@ -182,7 +182,7 @@
 
     .contact-after::after {
         content: "";
-        @apply h-full w-[2px] bg-bgColor top-[50%] right-0 absolute translate-y-[-50%];
+        @apply h-full w-[2px] hidden sm:block bg-bgColor top-[50%] right-0 absolute translate-y-[-50%];
     }
 
     .cursor {

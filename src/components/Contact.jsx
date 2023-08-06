@@ -14,8 +14,8 @@ const Contact = () => {
                 <div className="heading text-mainColor mb-8">
                     <h3>Contact</h3>
                 </div>
-                <div className="flex justify-between items-center gap-12">
-                    <div className="contact-after w-[30%] h-full shrink-0 pr-2 relative flex flex-col gap-10 justify-center items-center">
+                <div className="flex justify-between items-center gap-12 flex-col-reverse sm:flex-row">
+                    <div className="contact-after w-full sm:w-[30%] h-full shrink-0 pr-2 relative flex flex-wrap gap-10 justify-center items-center">
                         <div className="flex flex-col gap-1 justify-center items-center">
                             <BsTelephoneFill className="text-bgColor text-2xl" />
                             <div className="text-lg font-semibold">Phone</div>
@@ -54,7 +54,7 @@ const Contact = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="w-[70%]">
+                    <div className="w-full sm:w-[70%]">
                         <h2 className="text-xl xs:text-2xl sm:text-3xl text-mainColor font-bold mb-3">
                             Send me a message
                         </h2>
