@@ -11,10 +11,16 @@ import Portfolio from "./components/Portfolio/Portfolio";
 import GithubCalender from "./components/GithubCalender";
 
 const App = () => {
-    const { setScrolled } = useContext(Context);
+    const { setScrolled, click } = useContext(Context);
 
     useEffect(() => {
         let home = document.getElementById("home").clientHeight;
+        let about = document.getElementById("about").clientHeight;
+        let portfolio = document.getElementById("portfolio").clientHeight;
+        let skills = document.getElementById("skills").clientHeight;
+        let cta = document.getElementById("cta").clientHeight;
+        let contact = document.getElementById("contact").clientHeight;
+
         const scrollFunc = () => {
             let scroll = window.scrollY;
 
@@ -22,6 +28,31 @@ const App = () => {
                 setScrolled(true);
             } else {
                 setScrolled(false);
+            }
+
+            // console.log(about, home, portfolio, skills);
+
+            if (scroll <= home) {
+                const homeLink = document.getElementById("Home");
+                click(homeLink);
+            } else if (scroll > home && scroll <= home + about) {
+                const aboutLink = document.getElementById("About");
+                click(aboutLink);
+            } else if (
+                scroll > home + about &&
+                scroll <= home + about + portfolio
+            ) {
+                const portfolioLink = document.getElementById("Portfolio");
+                click(portfolioLink);
+            } else if (
+                scroll > home + about + portfolio &&
+                scroll <= home + about + portfolio + skills
+            ) {
+                const skillLink = document.getElementById("Skills");
+                click(skillLink);
+            } else if (scroll > home + about + portfolio + skills + cta) {
+                const contactLink = document.getElementById("Contact");
+                click(contactLink);
             }
         };
         return window.addEventListener("scroll", scrollFunc);

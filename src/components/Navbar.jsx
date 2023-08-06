@@ -5,18 +5,7 @@ import { Context } from "../assets/context/MyContext";
 import { menuItem } from "../assets/data";
 
 const Navbar = () => {
-    const { scrolled } = useContext(Context);
-    const [toggle, setToggle] = useState(false);
-
-    const click = (ele) => {
-        let links = document.querySelectorAll(".link-hover span");
-        links.forEach((link) => {
-            link.classList.remove("active");
-        });
-        if (ele) {
-            ele.querySelector("span").classList.add("active");
-        }
-    };
+    const { scrolled, toggle, setToggle, click } = useContext(Context);
 
     return (
         <header
@@ -52,10 +41,11 @@ const Navbar = () => {
                                 return (
                                     <Link
                                         to={ele.toLocaleLowerCase()}
+                                        id={ele}
                                         spy={true}
                                         smooth={true}
                                         duration={500}
-                                        offset={ele === "Home" ? -100 : -50}
+                                        offset={ele === "Home" ? -100 : -40}
                                         key={ele}
                                         className="relative overflow-hidden py-1 px-4 lg:px-6 link-hover"
                                         onClick={(e) => {

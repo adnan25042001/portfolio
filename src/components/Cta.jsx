@@ -21,7 +21,7 @@ const Cta = () => {
         visible: { y: 0, opacity: 1 },
     };
     return (
-        <motion.section className="wave w-full" variants={container} initial="hidden" whileInView="visible">
+        <motion.section className="wave w-full" variants={container} initial="hidden" whileInView="visible" id="cta">
             <div className="container m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-center justify-center text-center">
                 <motion.div className="cta-box" variants={item}>
                     <h3 className="font-bold text-2xl mb-3">1200+</h3>

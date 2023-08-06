@@ -16,6 +16,11 @@ const Contact = () => {
 
         console.log(name, email, message);
 
+        if (email.trim() === "") {
+            alert("Please enter your email");
+            return;
+        }
+
         await setDoc(doc(db, "messages", uid()), {
             name,
             email,
