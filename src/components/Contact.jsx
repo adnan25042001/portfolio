@@ -3,14 +3,32 @@ import Footer from "./Footer";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import { MdLocationOn } from "react-icons/md";
 import { BsTelephoneFill } from "react-icons/bs";
+import { db } from "../assets/firebase";
+import { doc, setDoc } from "firebase/firestore";
+import { uid } from "uid";
 
 const Contact = () => {
+    const submitForm = async (e) => {
+        e.preventDefault();
+        const name = e.target[0].value;
+        const email = e.target[1].value;
+        const message = e.target[2].value;
+
+        console.log(name, email, message);
+
+        await setDoc(doc(db, "messages", uid()), {
+            name,
+            email,
+            message,
+        });
+    };
+
     return (
         <section
-            className={`contact-bg bg-no-repeat bg-cover bg-center bg-mainColor bg-opacity-40`}
+            className="contact-bg bg-no-repeat bg-cover bg-center bg-mainColor bg-opacity-40 py-10"
             id="contact"
         >
-            <div className="container bg-white mx-auto text-black rounded-md shadow-bs p-6 xs:p-10">
+            <div className="container bg-white mx-auto text-black rounded-md shadow-bs px-6 py-4 xs:px-10 xs:py-8">
                 <div className="heading text-mainColor mb-8">
                     <h3>Contact</h3>
                 </div>
@@ -62,7 +80,10 @@ const Contact = () => {
                             If you have any work from me or any type of queries
                             related to me. You can send me message from here.
                         </p>
-                        <form className="flex flex-col mt-4 gap-3 items-start">
+                        <form
+                            className="flex flex-col mt-4 gap-3 items-start"
+                            onSubmit={submitForm}
+                        >
                             <input
                                 id="name"
                                 type="text"
