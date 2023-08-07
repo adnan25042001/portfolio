@@ -2,6 +2,12 @@ import s1 from "../assets/images/portfolio/skillex/s-1.png";
 import s2 from "../assets/images/portfolio/skillex/s-2.png";
 import s3 from "../assets/images/portfolio/skillex/s-3.png";
 
+import bs1 from "../assets/images/portfolio/bigstore/bs-1.png";
+import bs2 from "../assets/images/portfolio/bigstore/bs-2.png";
+import bs3 from "../assets/images/portfolio/bigstore/bs-3.png";
+import bs4 from "../assets/images/portfolio/bigstore/bs-4.png";
+import bs5 from "../assets/images/portfolio/bigstore/bs-5.png";
+
 import wm1 from "../assets/images/portfolio/wonder-mania/wm-1.png";
 import wm2 from "../assets/images/portfolio/wonder-mania/wm-2.png";
 import wm3 from "../assets/images/portfolio/wonder-mania/wm-3.png";
@@ -35,16 +41,25 @@ export const portfolioList = [
         imgList: [s1, s2, s3],
         name: "SKILLEX",
         desc: "Skillex is a cutting-edge e-learning platform! Embark on a journey of knowledge and skill enhancement from the comfort of your own space.",
-        tech: "React, Tailwind CSS, NodeJs, JavaScript",
+        tech: "React, Tailwind CSS, NodeJs",
         live: "https://skillex.onrender.com/",
         code: "https://github.com/adnan25042001/legendary-succotash",
     },
     {
         id: 2,
+        imgList: [bs1, bs2, bs3, bs4, bs5],
+        name: "BIGSTORE.",
+        desc: "BIGSTORE is a e-commerse website that is expertly curated by the best luxury fashion brands and boutiques.",
+        tech: "React, CSS, Strapi, Stripe, NodeJs",
+        live: "https://bigstore-auxi.onrender.com/",
+        code: "https://github.com/adnan25042001/bigstore",
+    },
+    {
+        id: 3,
         imgList: [wm1, wm2, wm3, wm4],
         name: "Wonder-Mania",
         desc: "Discover your dream destinations with ease. Our tour and travel website offers seamless planning, expert guides, and unforgettable experiences.",
-        tech: "React, Tailwind CSS, NodeJs, JavaScript",
+        tech: "React, Tailwind CSS, NodeJs",
         live: "https://wonder-mania.onrender.com/",
         code: "https://github.com/adnan25042001/wonder-mania",
     },
