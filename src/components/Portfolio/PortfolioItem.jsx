@@ -1,15 +1,16 @@
 import { motion } from "framer-motion";
 import React from "react";
+import ImageSlider from "./ImageSlider";
 
-const PortfolioItem = ({ img, name, desc, tech }) => {
+const PortfolioItem = ({ imgList, name, desc, tech, live, code }) => {
     return (
         <motion.div
             initial={{ y: 150, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="rounded-lg shadow-md hover:shadow-xl bg-white text-black"
+            className="rounded-lg shadow-md hover:shadow-xl bg-white text-black overflow-hidden"
         >
-            <img src={img} alt="" className="rounded-t-lg h-[180px] w-full" />
+            <ImageSlider imgList={imgList} />
             <div className="p-6 flex flex-col justify-between">
                 <div>
                     <h2 className="text-xl xs:text-2xl font-bold text-mainColor mb-3">
@@ -26,12 +27,20 @@ const PortfolioItem = ({ img, name, desc, tech }) => {
                     </p>
                 </div>
                 <div className="flex items-center justify-between">
-                    <button className="text-white transition-all duration-300 font-semibold border-[2px] border-mainColor rounded-lg bg-mainColor py-[4px] px-4 lg:py-[6px] lg:px-5 hover:bg-transparent hover:text-mainColor">
+                    <a
+                        href={live}
+                        target="_blank"
+                        className="text-white transition-all duration-300 font-semibold border-[2px] border-mainColor rounded-lg bg-mainColor py-[4px] px-4 lg:py-[6px] lg:px-5 hover:bg-transparent hover:text-mainColor"
+                    >
                         Live
-                    </button>
-                    <button className="text-white transition-all duration-300 font-semibold border-[2px] border-mainColor rounded-lg bg-mainColor py-[4px] px-4 lg:py-[6px] lg:px-5 hover:bg-transparent hover:text-mainColor">
+                    </a>
+                    <a
+                        href={code}
+                        target="_blank"
+                        className="text-white transition-all duration-300 font-semibold border-[2px] border-mainColor rounded-lg bg-mainColor py-[4px] px-4 lg:py-[6px] lg:px-5 hover:bg-transparent hover:text-mainColor"
+                    >
                         Code
-                    </button>
+                    </a>
                 </div>
             </div>
         </motion.div>

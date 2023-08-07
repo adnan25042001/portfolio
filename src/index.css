@@ -106,6 +106,10 @@
         @apply scale-[1.2];
     }
 
+    .arrow:hover svg{
+        opacity: 0.7;
+    }
+
     .skill {
         @apply flex flex-col h-36 w-36 items-center justify-center rounded-full overflow-hidden relative shrink-0;
     }

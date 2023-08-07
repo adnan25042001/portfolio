@@ -1,4 +1,11 @@
-import bigstore from "./images/portfolio/bigstore.png";
+import s1 from "../assets/images/portfolio/skillex/s-1.png";
+import s2 from "../assets/images/portfolio/skillex/s-2.png";
+import s3 from "../assets/images/portfolio/skillex/s-3.png";
+
+import wm1 from "../assets/images/portfolio/wonder-mania/wm-1.png";
+import wm2 from "../assets/images/portfolio/wonder-mania/wm-2.png";
+import wm3 from "../assets/images/portfolio/wonder-mania/wm-3.png";
+import wm4 from "../assets/images/portfolio/wonder-mania/wm-4.png";
 
 import html from "./images/skills/html.svg";
 import css from "./images/skills/css.svg";
@@ -25,45 +32,21 @@ export const menuItem = ["Home", "About", "Portfolio", "Skills", "Contact"];
 export const portfolioList = [
     {
         id: 1,
-        img: bigstore,
-        name: "BIGSTORE.",
-        desc: "BIGSTORE is a e-commerse website that is expertly curated by the best luxury fashion brands and boutiques.",
-        tech: "React, CSS, Strapi, Stripe, NodeJs",
+        imgList: [s1, s2, s3],
+        name: "SKILLEX",
+        desc: "Skillex is a cutting-edge e-learning platform! Embark on a journey of knowledge and skill enhancement from the comfort of your own space.",
+        tech: "React, Tailwind CSS, NodeJs, JavaScript",
+        live: "https://skillex.onrender.com/",
+        code: "https://github.com/adnan25042001/legendary-succotash",
     },
     {
         id: 2,
-        img: bigstore,
-        name: "BIGSTORE.",
-        desc: "BIGSTORE is a e-commerse website that is expertly curated by the best luxury fashion brands and boutiques.",
-        tech: "React, CSS, Strapi, Stripe, NodeJs",
-    },
-    {
-        id: 3,
-        img: bigstore,
-        name: "BIGSTORE.",
-        desc: "BIGSTORE is a e-commerse website that is expertly curated by the best luxury fashion brands and boutiques.",
-        tech: "React, CSS, Strapi, Stripe, NodeJs",
-    },
-    {
-        id: 4,
-        img: bigstore,
-        name: "BIGSTORE.",
-        desc: "BIGSTORE is a e-commerse website that is expertly curated by the best luxury fashion brands and boutiques.",
-        tech: "React, CSS, Strapi, Stripe, NodeJs",
-    },
-    {
-        id: 5,
-        img: bigstore,
-        name: "BIGSTORE.",
-        desc: "BIGSTORE is a e-commerse website that is expertly curated by the best luxury fashion brands and boutiques.",
-        tech: "React, CSS, Strapi, Stripe, NodeJs",
-    },
-    {
-        id: 6,
-        img: bigstore,
-        name: "BIGSTORE.",
-        desc: "BIGSTORE is a e-commerse website that is expertly curated by the best luxury fashion brands and boutiques.",
-        tech: "React, CSS, Strapi, Stripe, NodeJs",
+        imgList: [wm1, wm2, wm3, wm4],
+        name: "Wonder-Mania",
+        desc: "Discover your dream destinations with ease. Our tour and travel website offers seamless planning, expert guides, and unforgettable experiences.",
+        tech: "React, Tailwind CSS, NodeJs, JavaScript",
+        live: "https://wonder-mania.onrender.com/",
+        code: "https://github.com/adnan25042001/wonder-mania",
     },
 ];
 

@@ -8,6 +8,7 @@ export default {
                 mainColor: "#8d2de2",
                 PrimaryColor: "white",
                 secondryColor: "#e4e4e4",
+                arrow: "rgba(0, 0, 0, 0.05)",
             },
             backgroundImage: {
                 icon: "linear-gradient(-45deg, #9633e6, #df1d48)",
