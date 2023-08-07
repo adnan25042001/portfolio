@@ -6,6 +6,7 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { db } from "../assets/firebase";
 import { doc, setDoc } from "firebase/firestore";
 import { uid } from "uid";
+import { motion } from "framer-motion";
 
 const Contact = () => {
     const submitForm = async (e) => {
@@ -38,7 +39,12 @@ const Contact = () => {
                     <h3>Contact</h3>
                 </div>
                 <div className="flex justify-between items-center gap-12 flex-col-reverse sm:flex-row">
-                    <div className="contact-after w-full sm:w-[30%] h-full shrink-0 pr-2 relative flex flex-wrap gap-10 justify-center items-center">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="contact-after w-full sm:w-[25%] h-full shrink-0 pr-2 relative flex flex-wrap gap-10 justify-center items-center"
+                    >
                         <div className="flex flex-col gap-1 justify-center items-center">
                             <BsTelephoneFill className="text-bgColor text-2xl" />
                             <div className="text-lg font-semibold">Phone</div>
@@ -76,8 +82,8 @@ const Contact = () => {
                                 <SiGmail />
                             </a>
                         </div>
-                    </div>
-                    <div className="w-full sm:w-[70%]">
+                    </motion.div>
+                    <div className="w-full sm:w-[75%]">
                         <h2 className="text-xl xs:text-2xl sm:text-3xl text-mainColor font-bold mb-3">
                             Send me a message
                         </h2>
@@ -85,7 +91,10 @@ const Contact = () => {
                             If you have any work from me or any type of queries
                             related to me. You can send me message from here.
                         </p>
-                        <form
+                        <motion.form
+                            initial={{ opacity: 0, scale: 0 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.5 }}
                             className="flex flex-col mt-4 gap-3 items-start"
                             onSubmit={submitForm}
                         >
@@ -114,7 +123,7 @@ const Contact = () => {
                                 value="Send Now"
                                 className="text-white text-lg transition-all duration-300 font-semibold border-[2px] border-mainColor cursor-pointer rounded-lg bg-mainColor py-[6px] px-4 lg:py-2 lg:px-5 hover:bg-transparent hover:text-mainColor"
                             />
-                        </form>
+                        </motion.form>
                     </div>
                 </div>
                 <Footer />
