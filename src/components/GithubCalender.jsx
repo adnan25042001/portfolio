@@ -10,6 +10,7 @@ const GithubCalender = () => {
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3 }}
+                    className="hidden xs:block"
                 >
                     <GitHubCalendar username="adnan25042001" />
                 </motion.div>
@@ -19,11 +20,11 @@ const GithubCalender = () => {
                     transition={{ duration: 0.3 }}
                     href="https://github.com/adnan25042001"
                     target="_blank"
-                    class="px-12 sm:px-0"
+                    className="px-6"
                 >
                     <img
                         className="border border-gray-400 rounded-md shadow-sm shadow-mainColor hover:scale-110 transition-all duration-300 hover:shadow-md hover:shadow-mainColor"
-                        src="https://github-readme-streak-stats.herokuapp.com?user=adnan25042001&amp;theme=transparent&amp;hide_border=true&amp;ring=8d2de2&amp;background=020912&amp;currStreakLabel=8d2de2&amp;fire=FF0000"
+                        src="https://github-readme-streak-stats.herokuapp.com?user=adnan25042001&amp;theme=transparent&amp;hide_border=true&amp;ring=8d2de2&amp;background=020912&amp;currStreakLabel=8d2de2&amp;fire=FF0000&amp;currStreakNum=ffffff&amp;sideNums=ffffff&amp;currStreakLabel=ffffff&amp;sideLabels=ffffff&amp;dates=e4e4e4"
                         alt=""
                     />
                 </motion.a>
@@ -33,7 +34,7 @@ const GithubCalender = () => {
                     transition={{ duration: 0.3 }}
                     href="https://github.com/adnan25042001"
                     target="_blank"
-                    class="px-12 sm:px-0"
+                    className="px-6"
                 >
                     <img
                         className="border border-gray-400 rounded-md shadow-sm shadow-mainColor hover:scale-110 transition-all duration-300 hover:shadow-md hover:shadow-mainColor"
@@ -47,11 +48,11 @@ const GithubCalender = () => {
                     transition={{ duration: 0.3 }}
                     href="https://github.com/adnan25042001"
                     target="_blank"
-                    class="px-12 sm:px-0"
+                    className="px-6"
                 >
                     <img
                         className="border border-gray-400 rounded-md shadow-sm shadow-mainColor hover:scale-110 transition-all duration-300 hover:shadow-md hover:shadow-mainColor"
-                        src="https://github-readme-stats.vercel.app/api/top-langs/?username=adnan25042001&amp;theme=transparent&amp;text_color=ffffff&amp;title_color=8d2de2"
+                        src="https://github-readme-stats.vercel.app/api/top-langs/?username=adnan25042001&amp;theme=transparent&amp;text_color=ffffff&amp;hide_border=true&amp;title_color=8d2de2"
                     />
                 </motion.a>
             </div>
