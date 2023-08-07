@@ -1,7 +1,62 @@
-import React, { useEffect } from "react";
+import { motion } from "framer-motion";
+import React from "react";
+import GitHubCalendar from "react-github-calendar";
 
 const GithubCalender = () => {
-    return <section>Github</section>;
+    return (
+        <section id="github">
+            <div className="m-auto flex flex-col items-center justify-center gap-10">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                >
+                    <GitHubCalendar username="adnan25042001" />
+                </motion.div>
+                <motion.a
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                    href="https://github.com/adnan25042001"
+                    target="_blank"
+                    class="px-12 sm:px-0"
+                >
+                    <img
+                        className="border border-gray-400 rounded-md shadow-sm shadow-mainColor hover:scale-110 transition-all duration-300 hover:shadow-md hover:shadow-mainColor"
+                        src="https://github-readme-streak-stats.herokuapp.com?user=adnan25042001&amp;theme=transparent&amp;hide_border=true&amp;ring=8d2de2&amp;background=020912&amp;currStreakLabel=8d2de2&amp;fire=FF0000"
+                        alt=""
+                    />
+                </motion.a>
+                <motion.a
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                    href="https://github.com/adnan25042001"
+                    target="_blank"
+                    class="px-12 sm:px-0"
+                >
+                    <img
+                        className="border border-gray-400 rounded-md shadow-sm shadow-mainColor hover:scale-110 transition-all duration-300 hover:shadow-md hover:shadow-mainColor"
+                        src="https://github-readme-stats.vercel.app/api?username=adnan25042001&amp;show_icons=true&amp;locale=en&amp;theme=tranparent&amp;hide_border=true&amp;text_color=ffffff&amp;title_color=8d2de2&amp;bg_color=020912&amp;icon_color=8d2de2"
+                        alt=""
+                    />
+                </motion.a>
+                <motion.a
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                    href="https://github.com/adnan25042001"
+                    target="_blank"
+                    class="px-12 sm:px-0"
+                >
+                    <img
+                        className="border border-gray-400 rounded-md shadow-sm shadow-mainColor hover:scale-110 transition-all duration-300 hover:shadow-md hover:shadow-mainColor"
+                        src="https://github-readme-stats.vercel.app/api/top-langs/?username=adnan25042001&amp;theme=transparent&amp;text_color=ffffff&amp;title_color=8d2de2"
+                    />
+                </motion.a>
+            </div>
+        </section>
+    );
 };
 
 export default GithubCalender;

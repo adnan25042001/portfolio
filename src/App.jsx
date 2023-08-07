@@ -19,7 +19,7 @@ const App = () => {
         let portfolio = document.getElementById("portfolio").clientHeight;
         let skills = document.getElementById("skills").clientHeight;
         let cta = document.getElementById("cta").clientHeight;
-        let contact = document.getElementById("contact").clientHeight;
+        let github = document.getElementById("github").clientHeight;
 
         const scrollFunc = () => {
             let scroll = window.scrollY;
@@ -46,11 +46,14 @@ const App = () => {
                 click(portfolioLink);
             } else if (
                 scroll > home + about + portfolio &&
-                scroll <= home + about + portfolio + skills
+                scroll <= home + about + portfolio + skills + cta + github
             ) {
                 const skillLink = document.getElementById("Skills");
                 click(skillLink);
-            } else if (scroll > home + about + portfolio + skills + cta) {
+            } else if (
+                scroll >
+                home + about + portfolio + skills + cta + github
+            ) {
                 const contactLink = document.getElementById("Contact");
                 click(contactLink);
             }
@@ -88,7 +91,7 @@ const App = () => {
             <Portfolio />
             <Skills />
             <Cta />
-            {/* <GithubCalender /> */}
+            <GithubCalender />
             <Contact />
             <div className="cursor"></div>
         </>

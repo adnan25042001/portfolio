@@ -88,8 +88,11 @@ const Contact = () => {
                             Send me a message
                         </h2>
                         <p className="text-base sm:text-lg text-gray-700 font-medium">
-                            If you have any work from me or any type of queries
-                            related to me. You can send me message from here.
+                            I enthusiastically welcome conversations about
+                            freelancing or full-time roles. Please don't
+                            hesitate to reach out through your preferred
+                            communication channel. Let's connect and explore
+                            exciting opportunities together!
                         </p>
                         <motion.form
                             initial={{ opacity: 0, scale: 0 }}

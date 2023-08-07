@@ -106,7 +106,7 @@
         @apply scale-[1.2];
     }
 
-    .arrow:hover svg{
+    .arrow:hover svg {
         opacity: 0.7;
     }
 
