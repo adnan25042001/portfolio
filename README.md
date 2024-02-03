@@ -1,6 +1,6 @@
-# [http://localhost:3000](Adnan's Portfolio)
+# Adnan's Portfolio
 
-Welcome to my portfolio! This website is a showcase of my work and skills as a web developer. You can visit the live site here[http://localhost:3000](http://localhost:3000).
+Welcome to my portfolio! This website is a showcase of my work and skills as a web developer. You can visit the live site here [https://adnan-portfolio.onrender.com/](https://adnan-portfolio.onrender.com/).
 
 ## Technologies Used
 
@@ -23,10 +23,16 @@ To clone this project on your local machine and run it, follow these steps:
 
 1. Open your terminal.
 2. Change the current working directory to the location where you want the cloned directory.
-3. Type `git clone https://github.com/adnan25042001/portfolio.git`
+3. Type
+```
+  git clone https://github.com/adnan25042001/portfolio.git`
+```
 4. Press Enter to create your local clone.
 5. Navigate into the cloned repository.
-6. Install the dependencies by running `npm install`.
+6. Install the dependencies by running `
+```
+npm install
+```
 
 ## Feedback
 
